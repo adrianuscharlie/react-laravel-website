@@ -1,0 +1,7 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+#home{
+    background-image: url('./resources/assets/coffee-shop.jpg');
+}
