@@ -3,7 +3,7 @@ import picture from '../assets/logo2.png';
 
 export default function Navbar() {
     return (
-            <header className="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+            <header className="bg-transparent absolute top-0 left-0 w-full flex items-center z-1">
                 <div className="container">
                     <div className="flex items-center justify-between relative">
                         <div className="px-4">
