@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Card(props){
+    console.log(props);
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg">
             <img className="w-full" src={props.url} alt={props.name}></img>

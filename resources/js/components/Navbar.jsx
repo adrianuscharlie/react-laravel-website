@@ -1,8 +1,10 @@
 import React from "react";
+import { Outlet, Link } from "react-router-dom";
 import picture from '../assets/logo2.png';
 
 export default function Navbar() {
     return (
+      <>
             <header className="bg-transparent absolute top-0 left-0 w-full flex items-center z-1">
                 <div className="container">
                     <div className="flex items-center justify-between relative">
@@ -18,17 +20,14 @@ export default function Navbar() {
                       <nav id="nav-menu" className="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full 
                       lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
                         <ul className="block lg:flex">
-                          <li className="group">
-                            <a href="#home" className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Home</a>
+                          <li className="group text-base text-dark py-2 mx-8 flex group-hover:text-primary">
+                            <Link to="/">Home</Link>
                           </li>
-                          <li className="group">
-                            <a href="#about" className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Menu</a>
+                          <li className="group text-base text-dark py-2 mx-8 flex group-hover:text-primary">
+                            <Link to="/menu">Menu</Link>
                           </li>
-                          <li className="group">
-                            <a href="#portfolio" className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Chart</a>
-                          </li>
-                          <li className="group">
-                            <a href="#contact" className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Logout</a>
+                          <li className="group text-base text-dark py-2 mx-8 flex group-hover:text-primary">
+                            <Link to="/charts">Charts</Link>
                           </li>
                         </ul>
                       </nav>
@@ -36,5 +35,7 @@ export default function Navbar() {
                     </div>
                 </div>
             </header>
+            <Outlet/>
+            </>
     );
 }

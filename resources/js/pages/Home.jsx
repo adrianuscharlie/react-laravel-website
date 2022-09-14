@@ -6,7 +6,7 @@ import Social from "../components/Social";
 export default function Home(){
     return  (
     <div>
-        <section className="pt-36 mb-10 lg:pt-20">
+        <section className="pt-36 mb-10 lg:pt-36">
         <div className="container">
             <div className="flex flex-wrap">
                 <div className="w-full self-center px-20 lg:w-1/2">
