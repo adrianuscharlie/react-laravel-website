@@ -18,7 +18,7 @@ export default function Menu() {
                             Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta
                             55281
                         </p>
-                        <div className="flex flex-wrap lg:px-20">
+                        <div className="flex flex-wrap lg:px-10 py-10">
                         {MenuData.map((data) => (
                             <Card url={data.url} name={data.name} price={data.price} />
                         ))}
