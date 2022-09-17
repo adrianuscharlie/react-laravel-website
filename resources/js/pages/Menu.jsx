@@ -6,7 +6,7 @@ export default function Menu() {
         <section className="pt-36 pb-30 lg:pt-36">
             <div className="container">
                 <div className="flex flex-wrap">
-                    <div className="w-full item-center justify-center text-center px-20 lg:w-full">
+                    <div className="w-full item-center justify-center text-center px-20">
                         <h1 className="text-base font-semibold text-slate-300 mb-5 md:text-xl">
                             Let's Order Our Best Menu!
                         </h1>
@@ -14,13 +14,11 @@ export default function Menu() {
                             Menu
                         </h2>
                         <p className="text-base text-black mb-10">
-                            Jl. Kemiri No.165A, Nologaten, Caturtunggal, Kec.
-                            Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta
-                            55281
+                            cafe kami hadir dengan menu paling unggulan, dibuat dengan kopi cita rasa nusantara dan juga dibuat dengan penuh perasaan dan hati ❤️❤️❤️
                         </p>
-                        <div className="flex flex-wrap lg:px-10 py-10">
+                        <div className="flex flex-wrap items-center bg-white lg:pl-36">
                         {MenuData.map((data) => (
-                            <Card url={data.url} name={data.name} price={data.price} />
+                            <Card url={data.url} name={data.name} price={data.price} star={data.star}/>
                         ))}
                         </div>
                     </div>
