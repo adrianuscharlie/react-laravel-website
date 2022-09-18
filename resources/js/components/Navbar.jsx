@@ -9,7 +9,9 @@ export default function Navbar() {
                 <div className="container">
                     <div className="flex items-center justify-between relative">
                         <div className="px-4">
-                            <a href="#" className="font-bold text-slate-800 text-lg block py-6"><img src={picture} alt="cafe_photo" className="w-1/6 mx-auto rounded-md"/></a>
+                            <Link to="/" className="font-bold text-slate-800 text-lg block py-6">
+                            <img src={picture} alt="cafe_photo" className="w-1/6 mx-auto rounded-md"/>
+                            </Link>
                         </div>
                         <div className="flex items-center">
                         <button id="hamburger" name="hamburger" type="button" className=" hamburger block absolute right-4 lg:hidden">
