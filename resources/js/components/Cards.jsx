@@ -6,10 +6,10 @@ export default function Card(props) {
         <div className="max-w-full my-5 bg-white rounded-lg shadow-md lg:w-1/6 m-2">
             <img className="rounded-md object-scale-down" src={image} />
             <div className="p-5">
-                <h5 className="text-xl font-semibold tracking-tight text-gray-700 text-left mb-2">
+                <h5 className="text-xl font-semibold tracking-tight text-gray-700 text-left">
                     {props.name}
                 </h5>
-                <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center justify-between mb-2">
                     <span className="text-base font-bold text-gray-900 lg:text-xl mr-2">
                         Rp.{props.price}
                     </span>
@@ -25,7 +25,7 @@ export default function Card(props) {
                 <div className="flex items-center mt-2">
                     <svg
                         aria-hidden="true"
-                        class="w-5 h-5 text-yellow-300"
+                        className="w-5 h-5 text-yellow-300"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
