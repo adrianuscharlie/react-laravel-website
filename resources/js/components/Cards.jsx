@@ -3,7 +3,7 @@ import image from "../assets/menu/cappucino.jpg";
 
 export default function Card(props) {
     return (
-        <div className="max-w-full my-5 bg-white rounded-lg shadow-md lg:w-1/6 m-2">
+        <div className="max-w-full bg-white rounded-lg shadow-md m-2">
             <img className="rounded-md object-scale-down" src={image} />
             <div className="p-5">
                 <h5 className="text-xl font-semibold tracking-tight text-gray-700 text-left">

@@ -70,7 +70,7 @@ export default function Menu() {
                             </form>
                         </div>
 
-                        <div className="flex flex-wrap items-center bg-white lg:pl-36">
+                        <div className="bg-white lg:p-10 lg:m-10  lg:grid lg:grid-cols-4 lg:gap-2">
                             {MenuData.map((data) => (
                                 <Card
                                     url={data.url}
