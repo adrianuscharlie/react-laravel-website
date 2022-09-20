@@ -1,12 +1,17 @@
 import React from "react";
-import MenuData from "../components/MenuData";
 import Card from "../components/Cards";
 import { useState } from "react";
-export default function Menu() {
+export default function Menu(props) {
     const [query,setQuery]=useState("");
 
+    const filteredMenu=props.menu.filter(menu=>{
+        return (menu
+            .name
+            .toLowerCase()
+            .includes(query.toLowerCase()));
+    });
+
     function handleQuery(event){
-        console.log(event.target.value);
         setQuery(event.target.value);
     }
     return (
@@ -55,24 +60,19 @@ export default function Menu() {
                                         type="search"
                                         id="default-search"
                                         className="block p-4 pl-10 w-full text-sm text-gray-900 bg-slate-100 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                                        placeholder="Search Coffee, Food...."
+                                        placeholder="Type the menu name..."
                                         required=""
                                         value={query}
                                         onChange={handleQuery}
                                     />
-                                    <button
-                                        type="submit"
-                                        className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                    >
-                                        Search
-                                    </button>
                                 </div>
                             </form>
                         </div>
 
                         <div className="bg-white lg:p-10 lg:m-10  lg:grid lg:grid-cols-4 lg:gap-2">
-                            {MenuData.map((data) => (
+                            {filteredMenu.map((data,index) => (
                                 <Card
+                                    key={index}
                                     url={data.url}
                                     name={data.name}
                                     price={data.price}

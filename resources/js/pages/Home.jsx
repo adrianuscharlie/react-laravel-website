@@ -35,8 +35,8 @@ export default function Home(){
                         <h3 className="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Find Us</h3>
                         <p className="font-medium text-base text-secondary mb-6">If you want to know more about Kopi Rumah Bapak, you can find us in this social media by clicking these button below:</p>
                         <div className="flex items-center">
-                        {Data.map((data)=>(
-                            <Social name={data.nama} url={data.url} path={data.path}/>
+                        {Data.map((data,index)=>(
+                            <Social key={index} name={data.nama} url={data.url} path={data.path}/>
                         ))}
                     </div>
                     </div>

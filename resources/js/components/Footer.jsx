@@ -14,8 +14,13 @@ export default function Footer() {
                         </h2>
                         <h3 className="font-bold text-2xl mb-2">Our Address</h3>
                         <p>kopirumahbapak@gmail.com</p>
-                        <p>Jl. Kemiri No.165A, Nologaten, Caturtunggal, Kec. Depok</p>
-                        <p>Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</p>
+                        <p>
+                            Jl. Kemiri No.165A, Nologaten, Caturtunggal, Kec.
+                            Depok
+                        </p>
+                        <p>
+                            Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281
+                        </p>
                     </div>
                     <div className="w-full px-4 pb-12 md:w-1/2">
                         <h3 className="font-semibold text-xl text-white mb-5">
@@ -36,8 +41,9 @@ export default function Footer() {
                 </div>
                 <div className="w-full pt-10 border-t border-slate-800 ">
                     <div className="flex items-center justify-center mb-5">
-                        {Data.map((data) => (
+                        {Data.map((data, index) => (
                             <Social
+                                key={index}
                                 name={data.nama}
                                 url={data.url}
                                 path={data.path}
