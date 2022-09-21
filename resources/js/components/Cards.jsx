@@ -3,7 +3,7 @@ import image from "../assets/menu/cappucino.jpg";
 
 export default function Card(props) {
     return (
-        <div className="max-w-full bg-white rounded-lg shadow-md m-2">
+        <div className="max-w-full bg-white rounded-lg shadow-md m-2 mb-10">
             <img className="rounded-md object-scale-down" src={image} />
             <div className="p-5">
                 <h5 className="text-xl font-semibold tracking-tight text-gray-700 text-left">
@@ -15,12 +15,12 @@ export default function Card(props) {
                     </span>
                 </div>
                 <div className="flex items-center justify-between">
-                    <a
+                    <button
                         href="#"
                         className="text-white bg-slate-500 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl px-5  py-2 text-center lg:text-lg pr-10"
-                    >
+                    onClick={props.addKeranjang} value={props.id}>
                         Buy
-                    </a>
+                    </button>
                 </div>
                 <div className="flex items-center mt-2">
                     <svg

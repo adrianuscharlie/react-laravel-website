@@ -73,10 +73,12 @@ export default function Menu(props) {
                             {filteredMenu.map((data,index) => (
                                 <Card
                                     key={index}
+                                    id={data.id}
                                     url={data.url}
                                     name={data.name}
                                     price={data.price}
                                     star={data.star}
+                                    addKeranjang={props.addKeranjang}
                                 />
                             ))}
                         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import TableCharts from "../components/TableCharts";
 import MenuData from "../components/MenuData";
-export default function Charts() {
+export default function Charts(props) {
     return (
         <section className="pt-36 pb-32">
             <div className="container">
@@ -48,11 +48,12 @@ export default function Charts() {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {MenuData.map((item) => {
+                                        {props.keranjang.map((item,index) => {
                                             return (
                                                 <TableCharts
-                                                    name={item.name}
-                                                    price={item.price}
+                                                    key={index}
+                                                    data={item}
+                                                    handleQuantityChange={props.handleQuantityChange}
                                                 />
                                             );
                                         })}
